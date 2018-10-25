@@ -1,15 +1,22 @@
-const crypto = require("cryptocompare");
+const crypto = require("./crypto");
 const yargs = require("yargs");
 
 const argv = yargs
   .options({
-    a: {
+    c: {
       describe: "To fetch crypto info for",
       demand: true,
-      alias: "address",
+      alias: "crypto",
       string: true
     }
   })
   .help()
   .alias("help", "h").argv;
   
+  crypto.getCrypto(argv.c, (err, results) => {
+	  if(err){
+		  console.log(err)
+	  } else{cosole.log()
+		  
+	  }
+  }
