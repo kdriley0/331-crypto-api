@@ -23,6 +23,6 @@ var getCrypto = (crypto, cb) =>{
 };
 
 module.exports = {
-	cryptoInfo
+	getCrypto
 };
 	

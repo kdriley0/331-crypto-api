@@ -16,7 +16,9 @@ const argv = yargs
   crypto.getCrypto(argv.c, (err, results) => {
 	  if(err){
 		  console.log(err)
-	  } else{cosole.log()
+	  } else { cosole.log(`your crypto: ${argv.c},  \ncurrent state is:  
+		${results})`
 		  
-	  }
+	   }
+	  );
   }
