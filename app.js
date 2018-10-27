@@ -13,12 +13,13 @@ const argv = yargs
   .help()
   .alias("help", "h").argv;
   
+  //console.log("yargs", yargs);
   crypto.getCrypto(argv.c, (err, results) => {
 	  if(err){
-		  console.log(err)
-	  } else { cosole.log(`your crypto: ${argv.c},  \ncurrent state is:  
-		${results})`
-		  
-	   }
-	  );
-  }
+		  console.log(err);
+	  } else { console.log(`your_crypto: ${argv.c},  \ncurrent_state_is:  
+		${console.log(JSON.stringify(results))})`
+		);
+		  }
+	  
+  });

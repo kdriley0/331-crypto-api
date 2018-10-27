@@ -1,4 +1,4 @@
-const cryp = require("cryptocompare");
+const cryp = require("cryptocompare");//not needed?
 const request = require("request");
 
 var getCrypto = (crypto, cb) =>{
@@ -11,7 +11,7 @@ var getCrypto = (crypto, cb) =>{
 	(error, response, body) => {
 		if(error)	{
 			cb("unable to connect to the cryptocompare api server!");
-		}else {
+		} else if (!error && response.statusCode === 200) {
 			cb(undefined, {
 				all: body
 				
