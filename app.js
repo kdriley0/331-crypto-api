@@ -17,8 +17,8 @@ const argv = yargs
   crypto.getCrypto(argv.c, (err, results) => {
 	  if(err){
 		  console.log(err);
-	  } else { console.log(`your_crypto: ${argv.c},  \ncurrent_state_is:  
-		${console.log(JSON.stringify(results))})`
+	  } else { console.log(`your_crypto: ${argv.c},  \nyour_current_state_is:  
+		${JSON.stringify(results)}`
 		);
 		  }
 	  

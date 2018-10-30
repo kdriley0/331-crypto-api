@@ -4,7 +4,7 @@ const request = require("request");
 var getCrypto = (crypto, cb) =>{
 	request(
 	{
-		url: `https://min-api.cryptocompare.com/data/price?fsym=${crypto}&tsyms=USD,JPY,EUR`,
+		url: `https://min-api.cryptocompare.com/data/price?fsym=${crypto}&tsyms=BTC,USD,ETH`,
 		json: true 
 		
 	},
