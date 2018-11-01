@@ -1,6 +1,8 @@
 const crypto = require("./crypto");
 const yargs = require("yargs");
-
+//my function coin so I can have different coins
+var coin = {  symbol: "",price: 0};
+var coins= [];
 const argv = yargs
   .options({
     c: {
@@ -13,13 +15,23 @@ const argv = yargs
   .help()
   .alias("help", "h").argv;
   
+  var i=0;
   //console.log("yargs", yargs);
   crypto.getCrypto(argv.c, (err, results) => {
 	  if(err){
-		  console.log(err);
-	  } else { console.log(`your_crypto: ${argv.c},  \nyour_current_state_is:  
-		${JSON.stringify(results)}`
+		  console.log(err)
+	  } else { console.log(typeof(results)), console.log(`your_crypto: ${argv.c},  \nyour_current_state_is:  
+		${JSON.stringify(results)},`//key "USD" dictonary
 		);
+		
+		
+		var pointNum = parseFloat(results);
+		console.log(pointNum);
+		//let coinV = results.price;
+//	console.log(`your coin is ${argv.c} and its price is ${coinV}`);
+		
+	
 		  }
 	  
   });
+ // console.log("coin 1=", coins[0])
