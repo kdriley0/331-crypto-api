@@ -2,7 +2,7 @@ const crypto = require("./crypto");
 const yargs = require("yargs");
 //my function coin so I can have different coins
 var coin = {  symbol: "",price: 0};
-var coins= [];
+var coins= [];//hopefully so i can have multiple coins 
 const argv = yargs
   .options({
     c: {
@@ -26,8 +26,8 @@ const argv = yargs
 		
 		
 		var pointNum = parseFloat(results);
-		console.log(pointNum);
-		//let coinV = results.price;
+		console.log(pointNum);//NaN
+		//let coinV = results.price;//undefined
 //	console.log(`your coin is ${argv.c} and its price is ${coinV}`);
 		
 	
