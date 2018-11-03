@@ -3,6 +3,7 @@ const yargs = require("yargs");
 //my function coin so I can have different coins
 var coin = {  symbol: "",price: 0};
 var coins= [];
+var coi;
 const argv = yargs
   .options({
     c: {
@@ -26,13 +27,21 @@ const argv = yargs
 		
 		
 		const cstr = JSON.stringify(results);
-		let fcn = (cstr) =>{
-		  coins=cstr.split(" ");
-		  
+		const splitStr=cstr.split(":");
+		
+		
+		console.log(splitStr[2]);
+		coi = splitStr[2].substring(0,(splitStr[2].length-2));
+		coi=parseFloat(coi);
+		console.log(coi);
+		/*let fcn = cstr =>{
+		  coi=cstr.split(":");
+		  		console.log(coi);
 		}
-		console.log(coins);
 		
+
 		
+		*/
 		//let coinV = results.price;
 //	console.log(`your coin is ${argv.c} and its price is ${coinV}`);
 		
