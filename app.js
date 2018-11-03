@@ -7,18 +7,25 @@ var coi;
 const argv = yargs
   .options({
     c: {
-      describe: "To fetch crypto info for",
+      describe: "the symbol of the crypto",
       demand: true,
       alias: "crypto",
       string: true
     }
+  })
+  .options({
+	  n:{
+	  describe: "the amount of crypto",
+	  demand: true,
+	  alias: "a",
+	}
   })
   .help()
   .alias("help", "h").argv;
   
   var i=0;
   //console.log("yargs", yargs);
-  crypto.getCrypto(argv.c, (err, results) => {
+ crypto.getCrypto(argv.c, argv.n, (err, results) => {
 	  if(err){
 		  console.log(err)
 	  } else { console.log(typeof(results.USD)), console.log(`your_crypto: ${argv.c},  \nyour_current_state_is:  
@@ -34,17 +41,8 @@ const argv = yargs
 		coi = splitStr[2].substring(0,(splitStr[2].length-2));
 		coi=parseFloat(coi);
 		console.log(coi);
-		/*let fcn = cstr =>{
-		  coi=cstr.split(":");
-		  		console.log(coi);
-		}
-		
-
-		
-		*/
-		//let coinV = results.price;
-//	console.log(`your coin is ${argv.c} and its price is ${coinV}`);
-		
+			
+			console.log(`the number is: ${argv.n}` );
 	
 		  }
 	  
