@@ -13,19 +13,13 @@ const argv = yargs
       string: true
     }
   })
-  .options({
-	  n:{
-	  describe: "the amount of crypto",
-	  demand: true,
-	  alias: "a",
-	}
-  })
+ 
   .help()
   .alias("help", "h").argv;
   
   var i=0;
   //console.log("yargs", yargs);
- crypto.getCrypto(argv.c, argv.n, (err, results) => {
+ crypto.getCrypto(argv.c, (err, results) => {
 	  if(err){
 		  console.log(err)
 	  } else { console.log(typeof(results.USD)), console.log(`your_crypto: ${argv.c},  \nyour_current_state_is:  
@@ -42,7 +36,7 @@ const argv = yargs
 		coi=parseFloat(coi);
 		console.log(coi);
 			
-			console.log(`the number is: ${argv.n}` );
+			//console.log(`the number is: ${argv.n}` );
 	
 		  }
 	  
