@@ -1,8 +1,8 @@
 const crypto = require("./crypto");
 const yargs = require("yargs");
-//my function coin so I can have different coins
-var coin = {  symbol: "",price: 0};
-var coins= [];
+//my function coin so I can have different coins  I am going to try to store it in another file like we did with notes
+//var coin = {  symbol: "",price: 0};
+const coins = require("./coins")
 var coi;
 const argv = yargs
   .options({
@@ -22,23 +22,21 @@ const argv = yargs
  crypto.getCrypto(argv.c, argv.n, (err, results) => {
 	  if(err){
 		  console.log(err)
-	  } else { console.log(typeof(results.USD)), console.log(`your_crypto: ${argv.c},  \nyour_current_state_is:  
-		${JSON.stringify(results)},`//key "USD" dictonary
-		);
+	  } else { 
 		
 		
 		const cstr = JSON.stringify(results);
 		const splitStr=cstr.split(":");
 		
-		
+		var token=argv.c;
 	//	console.log(splitStr[2]);
 		coi = splitStr[3].substring(0,(splitStr[2].length-2));
 		coi=parseFloat(coi);
-	//	console.log(coi);
+	console.log(token);
 		var number=parseFloat(argv.n);
 		number*=coi;
-			
-			console.log(`your coins are worth ${number}$` );
+	
+			console.log(`your ${token} coins are worth ${number}$` );
 	
 		  }
 	  
