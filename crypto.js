@@ -1,7 +1,7 @@
 const cryp = require("cryptocompare");//not needed?
 const request = require("request");
 
-var getCrypto = (crypto, cb) =>{
+var getCrypto = (crypto, number, cb) =>{
 	request(
 	{
 		url: `https://min-api.cryptocompare.com/data/price?fsym=${crypto}&tsyms=BTC,USD,ETH`,
@@ -25,4 +25,3 @@ var getCrypto = (crypto, cb) =>{
 module.exports = {
 	getCrypto
 };
-	

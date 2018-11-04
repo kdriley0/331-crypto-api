@@ -19,7 +19,7 @@ const argv = yargs
   
   var i=0;
   //console.log("yargs", yargs);
- crypto.getCrypto(argv.c, (err, results) => {
+ crypto.getCrypto(argv.c, argv.n, (err, results) => {
 	  if(err){
 		  console.log(err)
 	  } else { console.log(typeof(results.USD)), console.log(`your_crypto: ${argv.c},  \nyour_current_state_is:  
@@ -31,12 +31,14 @@ const argv = yargs
 		const splitStr=cstr.split(":");
 		
 		
-		console.log(splitStr[2]);
-		coi = splitStr[2].substring(0,(splitStr[2].length-2));
+	//	console.log(splitStr[2]);
+		coi = splitStr[3].substring(0,(splitStr[2].length-2));
 		coi=parseFloat(coi);
-		console.log(coi);
+	//	console.log(coi);
+		var number=parseFloat(argv.n);
+		number*=coi;
 			
-			//console.log(`the number is: ${argv.n}` );
+			console.log(`your coins are worth ${number}$` );
 	
 		  }
 	  
