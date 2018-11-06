@@ -36,7 +36,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## how to run my file
 
-you need to run it with two arguments the first being the symbol of the coin you want to check the price of 
+you need to run it with two arguments.
+the first being the symbol of the coin you want to check the price of 
 and the second being the amount of coins you have of that crypto 
 
 node -c=TRX --n=5000
