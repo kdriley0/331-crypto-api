@@ -1,7 +1,10 @@
 const cryp = require("cryptocompare");//not needed?
 const request = require("request");
-
-var getCrypto = (crypto, number, cb) =>{
+/*
+* my caller to the cryptocompare API gets back my tokens price in BTC, ETH, and USD
+* I will only use the USD part for this assignment
+*/
+var get_crypto = (crypto, number, cb) =>{
 	request(
 	{
 		url: `https://min-api.cryptocompare.com/data/price?fsym=${crypto}&tsyms=BTC,USD,ETH`,
@@ -23,5 +26,5 @@ var getCrypto = (crypto, number, cb) =>{
 };
 
 module.exports = {
-	getCrypto
+	get_crypto//make sure to export it so it can be used in other files
 };
