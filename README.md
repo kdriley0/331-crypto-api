@@ -34,7 +34,7 @@ because the crypocompare portfolio is trash I hope thier API is better... if it 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 
-## how to run my file
+## How to run my file
 
 you need to run it with two arguments.
 the first being the symbol of the coin you want to check the price of 
