@@ -15,8 +15,8 @@ What I actually did was just make it so you can can send a symbol and the number
 ## Built With
 
 * [Nodejs](https://nodejs.org/en/docs/) - Backend
-* [yargs] to get aruments from the user
-* [request] to send the api call to cryptocompare
+* [ Yargs ] to get aruments from the user
+* [ request ] to send the api call to cryptocompare
 * [cryptocompare](https://www.cryptocompare.com/api/#introduction) - to get the info on the coins
 
 ## Author
